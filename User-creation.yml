@@ -5,10 +5,10 @@
   tasks:
   - name: Creating the users.
     user:
-      user_name: "{{ username }}"
+      user_name: "{{ sname }}"
       password:  "{{ 'Abcd123' | password_hash('sha512') }}"
-      comment: "{{ userfull }}"
+      comment: "{{ sfull }}"
       shell: /bin/bash
       group: tso
       groups: wheel
-      home: /home/{{ username }}
+      home: /home/{{ sname }}

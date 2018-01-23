@@ -6,7 +6,7 @@
   - name: Creating the users.
     user:
       user_name: "{{ username }}"
-      password:  "{{ 'userpass' | password_hash('sha512') }}"
+      password:  "{{ 'Abcd123' | password_hash('sha512') }}"
       comment: "{{ userfull }}"
       shell: /bin/bash
       group: tso

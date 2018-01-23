@@ -5,7 +5,7 @@
   tasks:
   - name: Creating the users.
     user:
-      user_name: "{{ sname }}"
+      name: "{{ sname }}"
       password:  "{{ 'Abcd123' | password_hash('sha512') }}"
       comment: "{{ sfull }}"
       shell: /bin/bash

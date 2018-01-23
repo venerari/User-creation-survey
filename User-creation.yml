@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  
+  tasks:
+  - user_name: Creating the users.
+    user:
+      user_name: "{{ user_name }}"
+      password:  "{{ 'Abcd123456' | password_hash('sha512') }}"
+      comment: "{{ user_fullname }}"
+      shell: /bin/bash
+      group: tso
+      groups: wheel
+      home: /home/{{ user_name }}

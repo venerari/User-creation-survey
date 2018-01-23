@@ -6,8 +6,8 @@
   - user_name: Creating the users.
     user:
       user_name: "{{ user_name }}"
-      password:  "{{ user_password | password_hash('sha512') }}"
-      comment: "{{ user_fullname }}"
+      password:  "{{ user_pass | password_hash('sha512') }}"
+      comment: "{{ user_full }}"
       shell: /bin/bash
       group: tso
       groups: wheel
